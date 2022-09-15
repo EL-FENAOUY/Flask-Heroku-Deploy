@@ -1,2 +1,2 @@
-web: gunicorn --bind 0.0.0.0:$PORT Flask_app:app
-
+web: gunicorn Flask_app:app
+web: gunicorn app:run
