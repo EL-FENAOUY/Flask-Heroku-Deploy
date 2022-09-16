@@ -5,15 +5,17 @@
 #import random
 #import traceback
 #import pandas as pd
-#import numpy as np
 #import pickle
-#import warnings
+import warnings
 
-#warnings.filterwarnings("ignore", category=UserWarning)
+warnings.filterwarnings("ignore", category=UserWarning)
 from flask import Flask, request, jsonify
+import warnings
+import numpy as np
 import pickle
 import pandas as pd
-import lightgbm 
+import lightgbm
+warnings.filterwarnings("ignore", category=UserWarning)
 
 #Load Dataframe
 ###---------- load data -------- 
@@ -61,7 +63,7 @@ def credit(id_client):
 
     print('Nouvelle Prédiction : \n', dict_final)
 
-    return jsonify(dict_final)
+    #return jsonify(dict_final)
 
 if __name__ == "__main__":
         app.run(debug=TRUE)
