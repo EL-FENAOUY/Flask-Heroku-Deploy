@@ -49,15 +49,15 @@ def credit(id_client):
     y_pred = model.predict(X)
     y_proba = model.predict_proba(X)
 
-    #dict_final = {
-        #'prediction' : int(y_pred),
-        #'proba' : float(y_proba[0][0])
-        #}
+    dict_final = {
+        'prediction' : int(y_pred),
+        'proba' : float(y_proba[0][0])
+        }
 
-    #print('Nouvelle Prédiction : \n', dict_final)
+    print('Nouvelle Prédiction : \n', dict_final)
 
-    #return jsonify(dict_final)
-    return f'This post has the id {y_pred}'
+    return jsonify(dict_final)
+   
 
 if __name__ == "__main__":
     app.run(debug=True)
