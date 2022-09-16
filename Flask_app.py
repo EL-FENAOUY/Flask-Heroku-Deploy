@@ -12,7 +12,7 @@
 #warnings.filterwarnings("ignore", category=UserWarning)
 from flask import Flask
 import pickle
-import pandas
+import pandas as pd
 
 #Load Dataframe
 ###---------- load data -------- 
