@@ -27,6 +27,9 @@ app = Flask(__name__)
 def show_post(id):
     # Shows the post with given id.
     return f'This post has the id {id}' 
+if __name__ == "__main__":
+        app.run(debug=TRUE)
+
 
 #@app.route("/credit")
 #def home_view():
@@ -35,13 +38,6 @@ def show_post(id):
         #model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
         
         #return "Hello, World!"
-
-@app.route('/post/<int:id>')
-def show_post(id):
-    # Shows the post with given id.
-    return f'This post has the id {id}'  
-if __name__ == "__main__":
-        app.run(debug=TRUE)
 
 
 #@app.route('/credit/<id_client>', methods=['GET'])
