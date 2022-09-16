@@ -6,16 +6,11 @@
 #import traceback
 #import pandas as pd
 #import pickle
-import warnings
-
-warnings.filterwarnings("ignore", category=UserWarning)
 from flask import Flask, request, jsonify
-import warnings
-import numpy as np
 import pickle
 import pandas as pd
 import lightgbm
-warnings.filterwarnings("ignore", category=UserWarning)
+
 
 #Load Dataframe
 ###---------- load data -------- 
