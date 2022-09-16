@@ -26,7 +26,7 @@ app = Flask(__name__)
 @app.route('/credit/<int:id_client>', methods=['GET'])
 def show_post(id_client):
     # Shows the post with given id.
-    return f'This post has the id {id}' 
+    return f'This post has the id {id_client}' 
 if __name__ == "__main__":
         app.run(debug=TRUE)
 
