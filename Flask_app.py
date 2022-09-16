@@ -18,7 +18,7 @@ app = Flask(__name__)
 ###---------- load data -------- 
 def load_all_data():
     
-    data = pd.read_csv("data/train_set_echantillon.csv")
+    data = pd.read_csv("./data/train_set_echantillon.csv")
 
     return data
 
