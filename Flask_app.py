@@ -23,12 +23,14 @@ def load_all_data():
 
 
 app = Flask(__name__)
-@app.route('/credit/<int:id_client>', methods=['GET'])
-def show_post(id_client):
+  
+@app.route('/post/<int:id>')
+def show_post(id):
     # Shows the post with given id.
-    return f'This post has the id {id_client}' 
+    return f'This post has the id {id}'
+
 if __name__ == "__main__":
-        app.run(debug=TRUE)
+    app.run(debug=True)
 
 
 #@app.route("/credit")
