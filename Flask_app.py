@@ -57,7 +57,7 @@ def credit(id_client):
     #print('Nouvelle Prédiction : \n', dict_final)
 
     #return jsonify(dict_final)
-    return f'This post has the id {dict_final['prediction']} and {dict_final['proba']} '
+    return f'This post has the id {y_pred} and {y_proba[0][0]}'
 
 if __name__ == "__main__":
     app.run(debug=True)
