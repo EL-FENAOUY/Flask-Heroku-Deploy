@@ -42,7 +42,7 @@ app = Flask(__name__)
         
 
 
-@app.route('/<id_client>', methods=['GET'])
+@app.route('/credit/<id_client>', methods=['GET'])
 def credit(id_client):
 
     data = load_all_data()
