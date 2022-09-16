@@ -27,7 +27,7 @@ def load_all_data():
 
 app = Flask(__name__)
 
-@app.route("/hello")
+@app.route("/")
 def home_view():
         
         data = load_all_data()
