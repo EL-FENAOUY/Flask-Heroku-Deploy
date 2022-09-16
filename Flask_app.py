@@ -1,26 +1,30 @@
 # Dependencies
-from os import system
-from flask import Flask, request, jsonify
-import json
-import random
-import traceback
-import pandas as pd
-import numpy as np
-import pickle
-import warnings
+#from os import system
+#from flask import Flask, request, jsonify
+#import json
+#import random
+#import traceback
+#import pandas as pd
+#import numpy as np
+#import pickle
+#import warnings
 
-warnings.filterwarnings("ignore", category=UserWarning)
+#warnings.filterwarnings("ignore", category=UserWarning)
 
-# Your API definition
+
+from flask import Flask
+
 app = Flask(__name__)
 
-@app.route('/')
-def hello_world():
-    return 'Hello World!'
-
-if __name__ == '__main__':
-    app.run()
-
+@app.route("/")
+def home_view():
+        return "<h1>Hello World!</h1>"
+    
+    
+if __name__ == "__main__":
+        app.run()
+        
+        
 #Load Dataframe
 ###---------- load data -------- 
 #def load_all_data():
