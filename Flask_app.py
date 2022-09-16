@@ -23,7 +23,6 @@ def load_all_data():
 
 
 app = Flask(__name__)
-  
 @app.route('/post/<int:id>')
 def show_post(id):
     # Shows the post with given id.
