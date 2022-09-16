@@ -14,39 +14,40 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # Your API definition
 app = Flask(__name__)
 
+@app.route('/')
+def hello_world():
+    return 'Hello World!'
+
+if __name__ == '__main__':
+    app.run()
+
 #Load Dataframe
 ###---------- load data -------- 
-def load_all_data():
+#def load_all_data():
     
-    data = pd.read_csv("./data/train_set_echantillon.csv")
+    #data = pd.read_csv("./data/train_set_echantillon.csv")
 
-    return data
+    #return data
 
-data = load_all_data()
+#data = load_all_data()
+#model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
 
+#@app.route('/credit/<id_client>', methods=['GET'])
+#def credit(id_client):
 
-@app.route('/credit/<id_client>', methods=['GET'])
-def credit(id_client):
+    #ID = int(id_client)
+    #X = data[data['SK_ID_CURR'] == ID]
+    #X = X.drop(['SK_ID_CURR', 'TARGET'], axis=1)
+    #y_pred = model.predict(X)
+    #y_proba = model.predict_proba(X)
 
-    model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
+    #dict_final = {
+        #'prediction' : int(y_pred),
+        #'proba' : float(y_proba[0][0])
+        #}
 
+    #print('Nouvelle Prédiction : \n', dict_final)
 
-
-    ID = int(id_client)
-    X = data[data['SK_ID_CURR'] == ID]
-    X = X.drop(['SK_ID_CURR', 'TARGET'], axis=1)
-    y_pred = model.predict(X)
-    y_proba = model.predict_proba(X)
-
-    dict_final = {
-        'prediction' : int(y_pred),
-        'proba' : float(y_proba[0][0])
-        }
-
-    print('Nouvelle Prédiction : \n', dict_final)
-
-    return jsonify(dict_final)
+    #return jsonify(dict_final)
 
 
-if __name__ == "__main__":
-    app.run()
