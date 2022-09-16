@@ -10,7 +10,7 @@
 #import warnings
 
 #warnings.filterwarnings("ignore", category=UserWarning)
-from flask import Flask
+from flask import Flask, request, jsonify
 import pickle
 import pandas as pd
 import lightgbm 
