@@ -28,6 +28,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home_view():
+        
         data = load_all_data()
         model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
         return "Hello, World!"
