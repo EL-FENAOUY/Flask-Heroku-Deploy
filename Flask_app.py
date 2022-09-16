@@ -27,7 +27,7 @@ def load_all_data():
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/credit/")
 def home_view():
         
         data = load_all_data()
@@ -36,8 +36,8 @@ def home_view():
         
     
     
-#if __name__ == "__main__":
-        #app.run(debug=TRUE)
+if __name__ == "__main__":
+        app.run(debug=TRUE)
         
         
 
