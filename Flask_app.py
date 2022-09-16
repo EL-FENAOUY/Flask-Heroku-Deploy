@@ -10,9 +10,23 @@
 #import warnings
 
 #warnings.filterwarnings("ignore", category=UserWarning)
-
-
 from flask import Flask
+import pickle
+import pandas
+
+#Load Dataframe
+###---------- load data -------- 
+def load_all_data():
+    
+    data = pd.read_csv("./data/train_set_echantillon.csv")
+
+    return data
+
+data = load_all_data()
+model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
+
+
+
 
 app = Flask(__name__)
 
@@ -26,16 +40,7 @@ if __name__ == "__main__":
         app.run()
         
         
-#Load Dataframe
-###---------- load data -------- 
-#def load_all_data():
-    
-    #data = pd.read_csv("./data/train_set_echantillon.csv")
 
-    #return data
-
-#data = load_all_data()
-#model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
 
 #@app.route('/credit/<id_client>', methods=['GET'])
 #def credit(id_client):
