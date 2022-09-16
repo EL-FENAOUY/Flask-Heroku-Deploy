@@ -13,6 +13,7 @@
 from flask import Flask
 import pickle
 import pandas as pd
+import lightgbm 
 
 #Load Dataframe
 ###---------- load data -------- 
