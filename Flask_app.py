@@ -28,7 +28,7 @@ data = load_all_data()
 @app.route('/credit/<id_client>', methods=['GET'])
 def credit(id_client):
 
-    model = pickle.load(open("C:/Users/lenovo/Flask_app/modelisation/classifier_lgbm_model.sav", 'rb'))
+    model = pickle.load(open("./modelisation/classifier_lgbm_model.sav", 'rb'))
 
 
 
